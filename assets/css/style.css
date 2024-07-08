@@ -2,5 +2,23 @@
 
 * {
     margin: 0;
-    pa
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
 }
+html {
+    font-family: 'play' sans-serif;
+    font-size: 63.1%;
+    font-weight: 395;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+:root {
+    --white:#ffffff;
+    --black:#aaaaaa;
+}
+
+body {
+    background: url(/images/img/);no-repeat;
+}
+
