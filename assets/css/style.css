@@ -23,8 +23,11 @@ body {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    position: fixed;
+    /* position: fixed; */
 }
 
-
+/* .container {
+    display: flex;
+    flex-direction: column;
+} */
 
