@@ -15,11 +15,11 @@ html {
 }
 :root {
     --white:#ffffff;
-    --black:#aaaaaa;
+    --black:#5c4747;
 }
 
 body {
-    background: url(../img/bg.png)no-repeat;
+    /* background: url("../images/img/bp.png") no-repeat; */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -30,4 +30,84 @@ body {
     display: flex;
     flex-direction: column;
 } */
+ ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #0c0101;
+    padding: 2rem 0;
+}
+h3 {
+    font-size: 2rem;
+    padding: 2rem 0;
+    text-transform: capitalize;
+    color: #d41616;
+    padding: 3rem;
+}
+.container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media(min-width: 576px){
+    .container {
+        width: 540px;
+    }
+}
+@media(min-width: 768px){
+    .container {
+        width: 720px;
+    }
+}
+@media(min-width: 992px){
+    .container {
+        width: 960px;
+    }
+}
+@media(min-width: 1200px){
+    .container {
+        width: 1140px;
+    }
+}
+@media(min-width: 1400px){
+    .container {
+        width: 1319px;
+    }
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: 701;
+    color: #5c4747;
+    text-transform: capitalize;
+    padding: 2rem;
+}
+.flags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-emphasis: center;
+    padding: 2rem 1.6rem;
+}
+.flags .flag-img {
+    width:100%
+}
+.flags .flag-img img {
+    width: 100%;
+    height: 21rem;
+    animation: zoom-in-zoom-out 4s ease-in infinite;
+}
+
+
+
+
 
