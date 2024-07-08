@@ -19,6 +19,12 @@ html {
 }
 
 body {
-    background: url(/images/img/);no-repeat;
+    background: url(../img/bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: fixed;
 }
+
+
 
