@@ -18,14 +18,14 @@ function getQuestions() {
     myRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let question = JSON.parse(this.responseText);
-            
+
             //number of question for each new game
             let qCount = 10;
             questionNum(qCount);
 
             //random question for each new game
             questions = question.sort(() => Math.random() - Math.random()).slice(0, 7);
-             
+
             //question data
             addQuestionData(questions[currentIndex], qCount);
 
@@ -37,7 +37,7 @@ function getQuestions() {
 
                     //checking answer after 450ms
                     setTimeout(() => {
-                        checkAnswer(rightAnswer,qCount);
+                        checkAnswer(rightAnswer, qCount);
                     }, 450);
 
                     setTimeout(() => {
@@ -58,12 +58,40 @@ function getQuestions() {
 
                 });
             });
-            
-            
-    
 
-        
+
+
+
+
 
         }
+    }
+    myRequest.open("GET", "js/flag_question.json", true);
+    myRequest.send();
+
+}
+getQuestions();
+
+function questionNum(num) {
+    countSpan.innerHTML = num;
+}
+
+function addQuestionData(obj, count) {
+    if (currentIndex < count) {
+        flagImg.src = `img/${obj.img}`;
+
+        //creating options
+        flagLis.forEach((li, i) => {
+            //dynamic id to li
+            li.id = `answer_${i + 1}`;
+            //dynamic data-attribut for li
+            li.dataset.answer = obj[`options`][i];
+            //putting options in the list
+            li.innerHTML = obj[`options`][i];
+
+
+
+        });
+
     }
 }
