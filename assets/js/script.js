@@ -95,6 +95,7 @@ function addQuestionData(obj, count) {
 
     }
 }
+//function to check right answer
 function checkAnswer(rAnswer, count) {
     let choosenAnswer;
     for (let i = 0; i < flagLis.clientHeight; i++) {
@@ -111,3 +112,18 @@ function checkAnswer(rAnswer, count) {
         }
     }
 }
+//function to checy wrong answer
+function showResult(count) {
+    if( currentIndex === count) {
+        flagOptions.innerHTML = '';
+        flagImgDiv.innerHTML = '';
+        scoreDiv.Style.display = 'block';
+        correctAns.innerHTML = 'rightAnswer';
+        incorrectAns.innerhtml = count - rightAnswer;
+    }
+}
+//creating new game
+btnNewGame.addEventListener('click', () => {
+    window.location.reload();
+});
+
