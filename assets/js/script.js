@@ -112,7 +112,7 @@ function checkAnswer(rAnswer, count) {
         }
     }
 }
-//function to checy wrong answer
+//function to check wrong answer
 function showResult(count) {
     if( currentIndex === count) {
         flagOptions.innerHTML = '';
