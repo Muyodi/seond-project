@@ -177,3 +177,40 @@ h3 {
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
+
+.flag .flag-options ul li.wrong {
+    background-color: red;
+}
+.flags .flag-options ul li.success {
+    background-color: #a0f0af;
+}
+.flags .flag-options ul li.active {
+    background-color:#5c4747;
+    color: var(#ffffff);
+}
+@media(min-width: 375px) {
+    h1,
+    h3,
+    .box .count {
+        font-size: 4rem;
+    }
+    .flags .flag-options ul li {
+        width: 100%;
+    }
+    .flags .flag-img,
+    .flags .flag-options ul {
+        width: 31rem;
+    }
+}
+@media(min-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+@media(min-width: 991px) {
+    .flags .flag-options ul li:hover {
+        background-color: #5c4747;
+        color:#ffffff;
+    }
+}
+
