@@ -66,7 +66,7 @@ function getQuestions() {
 
         }
     }
-    myRequest.open("GET", "js/flag_question.json", true);
+    myRequest.open("GET", "js/flag_questions.json", true);
     myRequest.send();
 
 }
