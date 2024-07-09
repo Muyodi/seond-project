@@ -25,7 +25,43 @@ function getQuestions() {
 
             //random question for each new game
             questions = question.sort(() => Math.random() - Math.random()).slice(0, 7);
+             
+            //question data
+            addQuestionData(questions[currentIndex], qCount);
+
+            flagLis.forEach(li => {
+                li.addEventListener('click', () => {
+                    let rightAnswer = questions[currentIndex].right_answer;
+                    li.classList.add('active');
+                    currentIndex++;
+
+                    //checking answer after 450ms
+                    setTimeout(() => {
+                        checkAnswer(rightAnswer,qCount);
+                    }, 450);
+
+                    setTimeout(() => {
+                        //removing img and all classes [active,wrong and success]
+                        flagImg.src = '';
+                        li.classList.remove('active');
+                        li.classList.remove('success');
+                        li.classList.remove('wrong');
+
+                        //more questions data to show next question
+                        addQuestionData(question[currentIndex], qCount);
+                    }, 1000);
+
+                    //results
+                    setTimeout(() => {
+                        showResult(qCount);
+                    }, 1002);
+
+                });
+            });
             
+            
+    
+
         
 
         }
