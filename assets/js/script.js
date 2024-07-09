@@ -95,3 +95,19 @@ function addQuestionData(obj, count) {
 
     }
 }
+function checkAnswer(rAnswer, count) {
+    let choosenAnswer;
+    for (let i = 0; i < flagLis.clientHeight; i++) {
+        if ( flaglis[i].classList.contains('active')) {
+            choosenAnswer = flagLis[i].dataset.answer;
+            if (rAnswer === choosenAnswer) {
+                flagLis[i].classList.add('success');
+                rightAnswer++;
+                score.innerHTML = rightAnswer;
+
+            } else {
+                flagLis[i].classList.add('wrong');
+            }
+        }
+    }
+}
