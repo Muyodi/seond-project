@@ -52,7 +52,7 @@ h3 {
     font-size: 2rem;
     padding: 2rem 0;
     text-transform: capitalize;
-    color: #d41616;
+    /* color: #d41616; */
     padding: 3rem;
 }
 
@@ -135,17 +135,20 @@ h3 {
         transform: scale(1, 1);
     }
 }
+
 .flag .flag-options {
     margin-top: 2rem;
 }
+
 .flags .flag-options ul {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 99%;
 }
+
 .flags .flag-options ul li {
-    font-size:2.6rem;
+    font-size: 2.6rem;
     text-transform: capitalize;
     margin-bottom: 1rem;
     background-color: #ffffff;
@@ -154,24 +157,27 @@ h3 {
     width: 241px;
     color: #5c4747;
     cursor: pointer;
-    box-shadow: 0.5rem rgba(green,);
+    box-shadow: 0.5rem rgba(green, );
     transition: all 1s ease-in-out;
 }
+
 .score {
     display: none;
     padding: 2rem;
     border-radius: 0.5rem;
 
 }
+
 .score .right,
 .score .incorrect {
-    color:#460707;
+    color: #460707;
 }
+
 #newGame {
     border: none;
-    background-color:#5c4747;
+    background-color: #5c4747;
     padding: 1.5rem;
-    color:#ffffff;
+    color: #ffffff;
     cursor: pointer;
     font-size: 1.7rem;
     font-weight: bold;
@@ -181,36 +187,43 @@ h3 {
 .flag .flag-options ul li.wrong {
     background-color: red;
 }
+
 .flags .flag-options ul li.success {
     background-color: #a0f0af;
 }
+
 .flags .flag-options ul li.active {
-    background-color:#5c4747;
+    background-color: #5c4747;
     color: var(#ffffff);
 }
+
 @media(min-width: 375px) {
+
     h1,
     h3,
     .box .count {
         font-size: 4rem;
     }
+
     .flags .flag-options ul li {
         width: 100%;
     }
+
     .flags .flag-img,
     .flags .flag-options ul {
         width: 31rem;
     }
 }
+
 @media(min-width: 768px) {
     h1 {
         font-size: 6rem;
     }
 }
+
 @media(min-width: 991px) {
     .flags .flag-options ul li:hover {
         background-color: #5c4747;
-        color:#ffffff;
+        color: #ffffff;
     }
 }
-
