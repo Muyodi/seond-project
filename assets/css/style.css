@@ -6,6 +6,7 @@
     box-sizing: border-box;
     outline: none;
 }
+
 html {
     font-family: 'play' sans-serif;
     font-size: 63.1%;
@@ -13,9 +14,10 @@ html {
     line-height: 1.5;
     scroll-behavior: smooth;
 }
+
 :root {
-    --white:#ffffff;
-    --black:#5c4747;
+    --white: #ffffff;
+    --black: #5c4747;
 }
 
 body {
@@ -30,12 +32,14 @@ body {
     display: flex;
     flex-direction: column;
 } */
- ul {
+ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
 }
+
 h1 {
     text-align: center;
     font-size: 2.4rem;
@@ -43,6 +47,7 @@ h1 {
     color: #0c0101;
     padding: 2rem 0;
 }
+
 h3 {
     font-size: 2rem;
     padding: 2rem 0;
@@ -50,37 +55,44 @@ h3 {
     color: #d41616;
     padding: 3rem;
 }
+
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
-@media(min-width: 576px){
+
+@media(min-width: 576px) {
     .container {
         width: 540px;
     }
 }
-@media(min-width: 768px){
+
+@media(min-width: 768px) {
     .container {
         width: 720px;
     }
 }
-@media(min-width: 992px){
+
+@media(min-width: 992px) {
     .container {
         width: 960px;
     }
 }
-@media(min-width: 1200px){
+
+@media(min-width: 1200px) {
     .container {
         width: 1140px;
     }
 }
-@media(min-width: 1400px){
+
+@media(min-width: 1400px) {
     .container {
         width: 1319px;
     }
 }
+
 .box {
     display: flex;
     align-items: center;
@@ -90,6 +102,7 @@ h3 {
     text-transform: capitalize;
     padding: 2rem;
 }
+
 .flags {
     display: flex;
     align-items: center;
@@ -98,16 +111,49 @@ h3 {
     text-emphasis: center;
     padding: 2rem 1.6rem;
 }
+
 .flags .flag-img {
-    width:100%
+    width: 100%
 }
+
 .flags .flag-img img {
     width: 100%;
     height: 21rem;
     animation: zoom-in-zoom-out 4s ease-in infinite;
 }
 
+@keyframes zoom-in-z00m-out {
+    0% {
+        transform: scale(1, 1);
+    }
 
+    50% {
+        transform: scale(1.1, 1.1);
+    }
 
-
-
+    99% {
+        transform: scale(1, 1);
+    }
+}
+.flag .flag-options {
+    margin-top: 2rem;
+}
+.flags .flag-options ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 99%;
+}
+.flags .flag-options ul li {
+    font-size:2.6rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    width: 241px;
+    color: #5c4747;
+    cursor: pointer;
+    box-shadow: 0.5rem rgba(green,);
+    transition: all 1s ease-in-out;
+}
