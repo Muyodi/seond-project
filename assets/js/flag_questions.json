@@ -11,30 +11,57 @@
     {
         "img": "united kingdom flag.png",
         "options": [
-            "italy flag",
-            "germany"
-            "united kingdom",
+            "italy",
+            "germany",
+            "united kingdom"
         ],
-        "right_answer": "united kingdom",
+        "right_answer": "united kingdom" 
     },
     {
         "img": "japan flag.png",
         "options": [
             "canada",
             "france",
-            "japan",
+            "japan" 
         ],
-        "right_answer": "japan",
+        "right_answer": "japan"
     },
     {
         "img": "italy flag.png",
         "options": [
-            "italy",
-            "america",
-            "france",
+            "italy" ,
+            "america" ,
+            "france" 
         ],
         "right_answer": "italy"
     },
-    
+    {
+        "img": "france flag.png",
+        "options":[
+            "italy",
+            "canada",
+            "france"
+        ],
+        "right_answer":"france"
+    },
+    {
+        "img": "canada.png",
+        "options":[
+            "united kingdom",
+            "japan",
+            "canada"
+        ],
+        "right_answer":"canada"
+    },
+    {
+        "img": "Germany flag.png",
+        "options":[
+            "germany",
+            "italy",
+            "united kingdom"
+        ],
+        "right_answer":"germany"
+    }
+
 
 ]
