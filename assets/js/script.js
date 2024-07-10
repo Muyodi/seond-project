@@ -1,7 +1,7 @@
 //select Elements
 let countSpan = document.querySelector('.count span');
 let flagImgDiv = document.querySelector('.flag-img');
-let flagImg = document.querySelector('.flag-img img');
+let flagImg = document.querySelector('.flag-img images');
 let flagOptions = document.querySelector('.flag-option ul');
 let flagLis = document.querySelector('.flag-option ul li');
 let score = document.querySelector('h3 span');
@@ -12,19 +12,27 @@ let btnNewGame = document.querySelector('#newGame');
 let currentIndex = 0;
 let rightAnswer = 0;
 
-//1st function
+
 function getQuestions() {
     let myRequest = new XMLHttpRequest();
     myRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            let question = JSON.parse(this.responseText);
+            let questions = JSON.parse(this.responseText);
+            
 
-            //number of question for each new game
-            let qCount = 10;
-            questionNum(qCount);
+             //number of question for each new game
+             let qCount = 7;
+             questionNum(qCount);
+
+            myRequest.open("GET", "js/flag_questions.json", true);
+            myRequest.send();
+        
+
+            
+            
 
             //random question for each new game
-            questions = question.sort(() => Math.random() - Math.random()).slice(0, 7);
+            questions = questions.sort(() => Math.random() - Math.random()).slice(0, 7);
 
             //question data
             addQuestionData(questions[currentIndex], qCount);
@@ -53,7 +61,7 @@ function getQuestions() {
 
                     //results
                     setTimeout(() => {
-                        showResult(qCount);
+                        showResults(qCount);
                     }, 1002);
 
                 });
@@ -66,8 +74,7 @@ function getQuestions() {
 
         }
     }
-    myRequest.open("GET", "js/flag_questions.json", true);
-    myRequest.send();
+    
 
 }
 getQuestions();
@@ -83,7 +90,7 @@ function addQuestionData(obj, count) {
         //creating options
         flagLis.forEach((li, i) => {
             //dynamic id to li
-            li.id = `answer_${i + 1}`;
+            li.id = `answer_${i+1}`;
             //dynamic data-attribut for li
             li.dataset.answer = obj[`options`][i];
             //putting options in the list
@@ -99,9 +106,9 @@ function addQuestionData(obj, count) {
 function checkAnswer(rAnswer, count) {
     let choosenAnswer;
     for (let i = 0; i < flagLis.clientHeight; i++) {
-        if ( flaglis[i].classList.contains('active')) {
+        if (flagLis[i].classList.contains('active')) {
             choosenAnswer = flagLis[i].dataset.answer;
-            if (rAnswer === choosenAnswer) {
+            if (rAnswer === choosenAnswer){
                 flagLis[i].classList.add('success');
                 rightAnswer++;
                 score.innerHTML = rightAnswer;
@@ -113,13 +120,13 @@ function checkAnswer(rAnswer, count) {
     }
 }
 //function to check wrong answer
-function showResult(count) {
-    if( currentIndex === count) {
+function showResults(count) {
+    if (currentIndex === count) {
         flagOptions.innerHTML = '';
         flagImgDiv.innerHTML = '';
         scoreDiv.Style.display = 'block';
-        correctAns.innerHTML = 'rightAnswer';
-        incorrectAns.innerhtml = count - rightAnswer;
+        correctAns.innerHTML = rightAnswer;
+        incorrectAns.innerHTML = count - rightAnswer;
     }
 }
 //creating new game

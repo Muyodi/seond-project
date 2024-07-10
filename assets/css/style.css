@@ -52,7 +52,7 @@ h1 {
     text-align: center;
     font-size: 2.4rem;
     text-transform: capitalize;
-    color: #0c0101;
+    color: #dd3d3d;
     padding: 2rem 0;
 }
 
@@ -169,11 +169,11 @@ h3 {
     font-size: 2.6rem;
     text-transform: capitalize;
     margin-bottom: 1rem;
-    background-color: #ffffff;
+    background-color: #d63838;
     padding: 1.1rem;
     border-radius: 0.5rem;
     width: 241px;
-    color: #5c4747;
+    color: #e93c3c;
     cursor: pointer;
     box-shadow: 0.5rem rgba(green, );
     transition: all 1s ease-in-out;
@@ -240,7 +240,7 @@ h3 {
 
 @media(min-width: 991px) {
     .flags .flag-options ul li:hover {
-        background-color: #5c4747;
+        background-color: #cf3434;
         color: #ffffff;
     }
 }
