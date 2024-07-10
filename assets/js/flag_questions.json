@@ -1,6 +1,6 @@
 [
     {
-        "img": "united state flag.png",
+        "img": "United State flag.png",
         "options": [
             "france",
             "america",
@@ -9,7 +9,7 @@
         "right_answer": "america"
     },
     {
-        "img": "united state flag.png",
+        "img": "United Kingdom flag.png",
         "options": [
             "italy",
             "germany",
@@ -36,13 +36,13 @@
         "right_answer": "italy"
     },
     {
-        "img": "france flag.png",
+        "img": "France flag.png",
         "options": [
             "italy",
             "canada",
             "france"
         ],
-        "right_answer": "france"
+        "right_answer": "France"
     },
     {
         "img": "canada.png",
@@ -51,7 +51,7 @@
             "japan",
             "canada"
         ],
-        "right_answer": "canada"
+        "right_answer": "Canada"
     },
     {
         "img": "Germany flag.png",

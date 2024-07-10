@@ -21,7 +21,7 @@ html {
 }
 
 body {
-     background: url("../images/img/bp.png") no-repeat; 
+      background: url("../images/img/bp.png") no-repeat;  
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -69,7 +69,7 @@ h3 {
     padding-right: 2rem;
     margin-left: auto;
     margin-right: auto;
-}
+} 
 
 @media(min-width: 576px) {
     .container {
@@ -112,7 +112,7 @@ h3 {
 
 }
 
-.box .count {
+.count {
     font-size: 2rem;
     font-weight: 700;
     text-transform: capitalize;

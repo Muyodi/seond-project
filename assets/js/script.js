@@ -1,4 +1,6 @@
 //select Elements
+let x = "beach";
+console.log(x);
 let countSpan = document.querySelector('.count span');
 let flagImgDiv = document.querySelector('.flag-img');
 let flagImg = document.querySelector('.flag-img images');
@@ -13,19 +15,21 @@ let currentIndex = 0;
 let rightAnswer = 0;
 
 
-function getQuestions() {
+function getQuestions(){
     let myRequest = new XMLHttpRequest();
-    myRequest.onreadystatechange = function () {
+    myRequest.onreadystatechange = function (){
         if (this.readyState === 4 && this.status === 200) {
             let questions = JSON.parse(this.responseText);
+            
             
 
              //number of question for each new game
              let qCount = 7;
              questionNum(qCount);
+             
 
-            myRequest.open("GET", "js/flag_questions.json", true);
-            myRequest.send();
+            
+            
         
 
             
@@ -56,7 +60,7 @@ function getQuestions() {
                         li.classList.remove('wrong');
 
                         //more questions data to show next question
-                        addQuestionData(question[currentIndex], qCount);
+                        addQuestionData(questions[currentIndex], qCount);
                     }, 1000);
 
                     //results
@@ -74,6 +78,8 @@ function getQuestions() {
 
         }
     }
+    myRequest.open("GET","script.js/flag_questions.json", true);
+    myRequest.send();
     
 
 }
@@ -132,5 +138,6 @@ function showResults(count) {
 //creating new game
 btnNewGame.addEventListener('click', () => {
     window.location.reload();
+    
 });
 
