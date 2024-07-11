@@ -1,5 +1,4 @@
 //select Elements
-let x = "beach";
 console.log(x);
 let countSpan = document.querySelector('.count span');
 let flagImgDiv = document.querySelector('.flag-img');
