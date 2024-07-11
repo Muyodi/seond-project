@@ -1,5 +1,4 @@
 //select Elements
-console.log(x);
 let countSpan = document.querySelector('.count span');
 let flagImgDiv = document.querySelector('.flag-img');
 let flagImg = document.querySelector('.flag-img images');
